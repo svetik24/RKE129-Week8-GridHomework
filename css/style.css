@@ -1,0 +1,124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     }
+    .container {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 0.5fr 0.5fr 0.25fr;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main extra extra"
+    "banner banner banner banner"
+    ;
+    height: 100vh;
+text-align: center;
+text-transform: uppercase;
+
+     }
+     header {
+        background-color: pink;
+        grid-area: header;
+        align-items: center;
+        display: grid;
+
+      }
+.menu { 
+    align-items: center;
+    background-color: palevioletred;
+    display: grid;
+    grid-area: menu;
+ 
+}
+.hero {
+    align-items: center;
+    display: grid;
+    background-color: brown;
+    grid-area: hero;
+
+ }
+
+main {
+    background-color: bisque;
+    grid-area: main;
+    align-items: center;
+    display: grid;
+ }
+ .banner {
+    background-color: rgb(168, 217, 144);
+    grid-area: banner;
+    align-items: center;
+    display: grid;
+  }
+  .extra {
+    background-color: rgb(206, 87, 212);
+    grid-area: extra;
+    align-items: center;
+    display: grid;
+    padding: var(--my-padding);
+   }
+ .image {
+    background-color: rgb(216, 74, 121);
+    grid-area: image;
+    align-items: center;
+    display: grid;
+    padding: var(--my-padding);
+
+  }
+@media (max-width: 1024px) {
+    .container {
+        gap: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "header menu menu menu"
+        "hero hero hero hero"
+        "main main image image"
+        "main main extra extra"
+        "banner banner banner banner"
+        ;
+     }
+
+ }
+ @media(max-width: 768px) {
+    .container {
+        gap: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1.25fr 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "menu main main"
+            "menu banner banner"
+            "menu extra image"
+        ;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .container {
+        gap: 0;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.35fr 1fr 1.25fr 0.75fr 0.75fr 0.75fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "hero"
+            "main"
+            "banner"
+            "extra"
+            "image"
+        ;
+    }
+
+}
